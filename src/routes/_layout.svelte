@@ -1,8 +1,17 @@
+<script context="module">
+  export async function preload(_, session) {
+    const { GA_MEASUREMENT_ID } = session;
+    return { GA_MEASUREMENT_ID };
+  }
+</script>
+
 <script>
+  import GoogleAnalytics from "sapper-google-analytics/GoogleAnalytics.svelte";
   import { stores, goto } from "@sapper/app";
   import { fade, fly } from "svelte/transition";
   import Nav from "#components/Nav.svelte";
 
+  export let GA_MEASUREMENT_ID = "";
   const { page, preloading, session } = stores();
 </script>
 
@@ -19,7 +28,6 @@
 </style>
 
 <Nav />
-
 <main>
   {#if $preloading}
 
@@ -31,3 +39,4 @@
     </div>
   {/if}
 </main>
+<GoogleAnalytics {stores} id={GA_MEASUREMENT_ID} />
