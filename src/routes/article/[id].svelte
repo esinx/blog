@@ -17,6 +17,8 @@
 
 <svelte:head>
   <link rel="stylesheet" href="/victor-mono/index.css" />
+  <title>{article.frontmatter.title}</title>
+  <meta name="description" content={article.frontmatter.tags.join(', ')} />
 </svelte:head>
 
 <article>
