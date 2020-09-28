@@ -27,12 +27,15 @@
       align-items: center;
       justify-content: center;
       #pic-of-me {
-        width: 100px;
-        height: 100px;
+        width: 180px;
+        height: 180px;
         border-radius: 50%;
-        background: url(/you-probably-should-not-save-this.png) no-repeat center
-          center;
+        background: url(/you-probably-should-not-save-this.webp) no-repeat
+          center center;
         background-size: cover;
+      }
+      p {
+        text-align: center;
       }
       .links {
         display: flex;
@@ -99,7 +102,11 @@
     <div id="pic-of-me" />
     <h1>Hi. I'm Eunsoo.</h1>
     <p>I write code and things about code.</p>
-    <p>I overuse JavaScript: NodeJS, Svelte, React</p>
+    <p>
+      I overuse JavaScript: NodeJS, Svelte, React
+      <br />
+      I enjoy functional programming, thanks to OCaml.
+    </p>
     <div class="links">
       <a href="https://github.com/esinx" target="_blank">
         <svg
@@ -157,7 +164,7 @@
   </header>
 
   <div id="articles">
-    <h1>Articles</h1>
+    <h1>🖋 Articles</h1>
     {#each articles as article}
       <a class="article" href={`/article/${article.slug}`}>
         <span class="title">{article.title}</span>
@@ -170,10 +177,15 @@
       </a>
     {/each}
   </div>
-  <p>By the way, this blog is still under construction.</p>
+  <p>
+    By the way, this blog is still under construction. Aren't my page
+    transitions sick? It's
+    <a href="https://sapper.svelte.dev/" target="_blank">sapper</a>
+    magic
+  </p>
 
   <div id="contact">
-    <h1>Contact</h1>
+    <h1>📬 Contact</h1>
     <p>
       Hey spambots,
       <a
