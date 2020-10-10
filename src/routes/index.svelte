@@ -162,6 +162,10 @@
           @e_sinx
         </a>
       </div>
+      <p>
+        I have a
+        <a href="/resume">résumé page</a>
+      </p>
       <p style="color:#ccc;">
         These icons are teenyicons and the font is IBM Plex Mono. Both awesome
         works.
