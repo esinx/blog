@@ -1,5 +1,7 @@
 ---
 title: "Promise: The Misconceptions"
+subtitle: "When does it fire? Is it really concurrent?"
+icon: 😉
 date: 2020-07-15T11:30:34.059Z
 tags:
     - javascript
